@@ -1,3 +1,35 @@
 a{
     text-decoration: none;
 }
+
+header{
+    background-color: black;
+    color: white;
+}
+
+header img{
+    width: 200px;
+    max-width: 200px;
+    border-radius: 100%;
+    border: white solid 5px;
+    margin-top: 5vh;
+}
+
+#name{
+    font-size: 7vw;
+}
+
+.line{
+    border: white 5px solid;
+    border-radius: 5px;
+    width: 30vw;
+    margin: auto;
+}
+
+header h1{
+    margin: 5vh;
+}
+
+header h2{
+    margin: 5vh;
+}
