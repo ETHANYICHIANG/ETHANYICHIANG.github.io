@@ -33,3 +33,11 @@ header h1{
 header h2{
     margin: 5vh;
 }
+
+#bio{
+    padding-bottom: 50px;
+}
+
+#school{
+    font-size: 25px;
+}
