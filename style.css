@@ -31,11 +31,16 @@ header h1{
 }
 
 header h2{
-    margin: 5vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 55%;
+    margin: auto;
+    font-size: 3.5vh;
 }
 
 #bio{
-    padding-bottom: 50px;
+    padding-bottom: 50px; 
+    background-image: url("img/code_background.jpg");
+    background-size: cover;
 }
 
 #school{
