@@ -1,3 +1,4 @@
+/* nav bar */
 a{
     text-decoration: none;
 }
@@ -15,6 +16,19 @@ header img{
     margin-top: 5vh;
 }
 
+.nav-link{
+    text-decoration: underline;
+}
+
+.nav-link:hover{
+    color: white;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* bio */
+
 #name{
     font-size: 7vw;
 }
@@ -31,13 +45,47 @@ header h1{
 }
 
 header h2{
-    margin: 5vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 55%;
+    margin: auto;
+    font-size: 3.5vh;
 }
 
 #bio{
-    padding-bottom: 50px;
+    padding-bottom: 50px; 
+    background-image: url("img/code_background.jpg");
+    background-size: cover;
 }
 
 #school{
     font-size: 25px;
+}
+
+/* portfolio */
+
+#portfolio-text{
+    padding: 15px;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    padding-bottom: 5px;
+}
+
+footer a{
+    margin: 15px;
+}
+
+.social-icons i{
+    color: white;
+    border: white solid 2px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons i:hover{
+    color: black;
+    background-color: white;
 }
