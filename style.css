@@ -86,6 +86,7 @@ header h2{
 
 .websites{
     margin: 1.5vh;
+    border-radius: 15px;
 }
 
 .websites img{
@@ -109,9 +110,26 @@ header h2{
     text-decoration: none;
 }
 
+.websites:hover {
+    box-shadow: gray 1px 1px 15px;
+}
+
 .row{
     padding: 15px;
 }
+
+/* Skills */
+
+#Skills{
+    width: 100%;
+}
+
+#skills-text{
+    padding: 15px;
+    background-color: gray;
+    color: white;
+}
+
 
 /* footer */
 footer{
