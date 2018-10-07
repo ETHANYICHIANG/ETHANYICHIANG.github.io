@@ -1,3 +1,12 @@
+/* global */
+section{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+}
+
 /* nav bar */
 a{
     text-decoration: none;
@@ -119,15 +128,37 @@ header h2{
 }
 
 /* Skills */
-
 #Skills{
     width: 100%;
-}
 
+}
 #skills-text{
+    margin: auto;
     padding: 15px;
     background-color: gray;
     color: white;
+    width: 100%;
+}
+
+.langages{
+    margin: 0.5vh 0px 0.5vh 0px;
+    font-size: 2.5vw;
+    background-color: rgba(200, 200, 200);
+    padding: 5vh 0 5vh 0;
+    border: 1px solid black;
+    box-shadow: black 5px 5px 5px;
+}
+
+.langages:hover{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+.langages:active{
+    background-color: black;
+    color: white;
+    box-shadow: none;
 }
 
 
@@ -178,3 +209,26 @@ footer a{
     transform: scale(1.2);
     transition: all ease-in-out .2s;
 }
+
+
+/* @media */
+
+/* Small devices (landscape phones, 576px and up) */ 
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
