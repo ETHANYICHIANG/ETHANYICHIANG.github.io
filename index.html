@@ -16,8 +16,30 @@
     <!-- costume css -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
+
+    <!-- WIP alert -->
+    <script>
+        swal({
+            title: "Under Construction",
+            text: "View at your own risk!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+
+        .then((willDelete) => {
+        if (willDelete)
+            swal("Don't say I didn't warn you")
+        else 
+            swal("Here is comes anyway");
+        });
+    </script>
+
     <div id="container" class="text-center">
 
         <!-- nav bar -->
@@ -69,6 +91,7 @@
             </div>
         </header>
 
+        <!-- portfolio -->
         <section class="portfolio" id="Portfolio">
             <div clas="container">
                 <h2 id="portfolio-text" class="text-center text-uppercase mb-0">Portfolio</h2>
@@ -109,6 +132,43 @@
             </div>
         </section>
 
+        <!-- Skills -->
+        <section class="Skills" id="Skills">
+            <div class="container">
+                <h2 id="skills-text" class="text-center text-uppercase mb-0">Skills</h2>
+                <h3 style="margin: 5vh; text-decoration: underline; font-size: 35px">Langages</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <h4 onclick="" class="langages">C++</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">C#</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">Python</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">HTML</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">CSS</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">Javascript</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages"></h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">Java</h4>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="langages">Swift</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer id="Contact">
             <br>
             <h2>Contact Me</h2>
@@ -136,11 +196,17 @@
                 </div>
             </div>
             <br>
-            <h6 class="font-weight-light">copyright&copy; EYC 2018</h4>
+            <h6 class="font-weight-light">copyright&copy; EYC 2018</h6>
             
         </footer>
     
     </div>  
+
+    <!-- custome JS -->
+    <script>
+    
+    </script>
+
     <!-- bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
