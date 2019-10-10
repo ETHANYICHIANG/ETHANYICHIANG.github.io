@@ -1,9 +1,15 @@
+
+
 /* global */
 section{
     width: 100%;
 }
 
 .container{
+    width: 100%;
+}
+
+.container-fix {
     width: 100%;
 }
 
