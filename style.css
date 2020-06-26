@@ -13,6 +13,12 @@ section{
     width: 100%;
 }
 
+*, html, body {
+    padding: 0;
+    margin: o auto;
+    scroll-behavior: smooth;
+}
+
 /* nav bar */
 
 .navbar-nav{
@@ -141,6 +147,20 @@ header h2{
 
 .row{
     padding: 15px;
+}
+
+/* Bio */
+.bio-text {
+    border: gray 5px solid;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 60%;
+    padding: 20px;
+}
+
+.bio-text p {
+    margin: 0;
+    font-size: 2em;
 }
 
 /* Skills */
