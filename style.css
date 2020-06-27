@@ -81,9 +81,8 @@ header h1{
 
 header h2{
     background-color: rgba(128, 128, 128, 0.5);
-    width: 55%;
+    width: 80%;
     margin: auto;
-    font-size: 3.5vh;
 }
 
 #bio{
@@ -94,6 +93,11 @@ header h2{
 
 #school{
     font-size: 25px;
+    font-weight: lighter;
+}
+
+#short-bio {
+    font-size: 2em;
 }
 
 .code-line i{
@@ -161,13 +165,85 @@ header h2{
 .bio-text p {
     margin: 0;
     font-size: 2em;
+    text-align: left;
 }
 
 /* Skills */
 #Skills{
     width: 100%;
-
 }
+
+.skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    width: 23%;
+    height: 300px;
+    margin: 1vw;
+}
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .flip-card-front h1, .flip-card-back h1 {
+      font-size: 2vw;
+  }
+  
+  .flip-card-back {
+    background-color: #bbb;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back ul {
+      margin: 0 auto;
+      width: 80%;
+  }
+
+  .flip-card-back li {
+    text-align: left;
+}
+
+
 #skills-text{
     margin: auto;
     padding: 15px;
@@ -234,7 +310,7 @@ footer a{
 .social-icons i:hover{
     color: black;
     background-color: white;
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .3s;
 }
 
 #email a{
@@ -245,7 +321,7 @@ footer a{
 
 #email i:hover{
     transform: scale(1.2);
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .3s;
 }
 
 
