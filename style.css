@@ -219,7 +219,7 @@ header h2{
   
   .flip-card-front {
     background-color: #bbb;
-    color: black;
+    color: white;
     background-size: cover;
     background-position: center;
   }
