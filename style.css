@@ -57,14 +57,19 @@ header img{
     margin-top: 5vh;
 }
 
-
-
-
-
 /* bio */
 
-#name{
+#name {
     font-size: 7vw;
+    color: white;
+}
+
+#name a {
+    text-decoration: none;
+}
+
+.wrap {
+    color: white;
 }
 
 .line{
@@ -323,7 +328,6 @@ footer a{
     transform: scale(1.2);
     transition: all ease-in-out .3s;
 }
-
 
 /* @media */
 

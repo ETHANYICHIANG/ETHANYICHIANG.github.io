@@ -26,23 +26,66 @@
 
 <body>
 
-    <!-- WIP alert -->
-    <!-- <script>
-        swal({
-            title: "Under Construction",
-            text: "View at your own risk!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
-        .then((willDelete) => {
-        if (willDelete)
-            swal("Don't say I didn't warn you")
-        else 
-            swal("Here is comes anyway");
-        });
-    </script> -->
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>
+    <span id="typed"></span>
 
     <div id="container" class="text-center">
 
@@ -80,7 +123,13 @@
         <header>
             <div id="bio">
                 <img class="img-fluid" src="img/ethanpic.jpg">
-                <h1 id="name">ETHAN CHIANG</h1>
+                <div class="typewriter">
+                    <h1 id="name">
+                        <a href="" class="typewrite" data-period="2000"
+                            data-type='[ "Hi, I am Ethan", "I develop web", "I develop game", "I develop iOS" ]'>
+                            <span class="wrap"></span>
+                        </a></h1>
+                </div>
                 <div class="code-line">
                     <h1 class="line"></h1><i class="fas fa-code fa-5x"></i>
                     <h1 class="line"></h1>
@@ -209,7 +258,9 @@
                                 <h1>iOS (swift)</h1>
                                 <ul>
                                     <li>1 yr+ of swift iOS programming</li>
-                                    <li>Swift OCR library <a target="_blank" href="https://github.com/ETHANYICHIANG/SwiftCarPlateOCR">SwiftCarPlateOCR</a></li>
+                                    <li>Swift OCR library <a target="_blank"
+                                            href="https://github.com/ETHANYICHIANG/SwiftCarPlateOCR">SwiftCarPlateOCR</a>
+                                    </li>
                                     <li>ECS189E iOS mobile development @UCDavis </li>
                                 </ul>
                             </div>
@@ -224,7 +275,8 @@
                                 <h1>React/Node/Express</h1>
                                 <ul>
                                     <li>3m internship experience @JustEaze.Davis, working on web application</li>
-                                    <li>Lost n Found website for UCDavis student <a target="_blank" href="https://github.com/ETHANYICHIANG/404_not_found">404 not found</a></li>
+                                    <li>Lost n Found website for UCDavis student <a target="_blank"
+                                            href="https://github.com/ETHANYICHIANG/404_not_found">404 not found</a></li>
                                     <li>ECS162 web programming @UCDavis</li>
                                 </ul>
                             </div>
@@ -239,6 +291,19 @@
                                 <h1>Python</h1>
                                 <ul>
                                     <li>3 yr+ of teaching experience in Python programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card skill">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1>AI/ML</h1>
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>AI/ML</h1>
+                                <ul>
+                                    <li>ECS170 AI, ECS171 ML @UCD</li>
                                 </ul>
                             </div>
                         </div>
@@ -260,7 +325,7 @@
                     </p>
                     <br>
                     <p>
-                        During my years in college,
+                        During my two years at UCD after transfering from a community college,
                         I have worked on a couple of research projects,
                         one was a <strong>swift</strong> library that runs <strong>OCR</strong> on car plates via a live
                         video stream
@@ -269,6 +334,11 @@
                         Another is a student-led, federal founded game project,
                         my role as a <strong>gameplay programmer</strong> is to implement and design versus systems in
                         the game.
+                    </p><br>
+                    <p>
+                        Outside of academia, I had an internship @JustEaze, Davis.
+                        Working on a web application for the legal industry.
+                        Tech stack includes <strong>React, Node, Express, Socket, and MongoDB</strong>.
                     </p><br>
                     <p>
                         Now I am actively looking for opportunities as a <strong>web, game, or iOS</strong> developer.
