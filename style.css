@@ -17,6 +17,7 @@ section{
     padding: 0;
     margin: o auto;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* nav bar */
@@ -163,7 +164,7 @@ header h2{
     border: gray 5px solid;
     border-radius: 5px;
     margin: 20px auto;
-    width: 60%;
+    width: 80%;
     padding: 20px;
 }
 
@@ -230,7 +231,7 @@ header h2{
   }
 
   .flip-card-front h1, .flip-card-back h1 {
-      font-size: 2vw;
+      font-size: 1.5em;
   }
   
   .flip-card-back {
@@ -329,24 +330,47 @@ footer a{
     transition: all ease-in-out .3s;
 }
 
+#emailaddress {
+    word-break: break-all;
+}
+
 /* @media */
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    .skill {
+        width: 48%;
+    }
+    .flip-card-front h1, .flip-card-back h1 {
+        font-size: 2em;
+    }
 
-/* Small devices (landscape phones, 576px and up) */ 
-@media (min-width: 576px) {
+    .flip-card-back li {
+        font-size: 1.2em;
+    }
 
+    .fa-5x {
+        font-size: 3em;
+    }
+
+    .bio-text p{
+        font-size: 1.5em;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
+    .skill {
+        width: 100%;
+    }
 
+    .fa-5x {
+        font-size: 2em;
+    }
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
- }
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-
- }
+/* Small devices (landscape phones, 576px and up) */ 
+@media (max-width: 576px) {
+    .skill {
+        width: 100%;
+    }
+}
