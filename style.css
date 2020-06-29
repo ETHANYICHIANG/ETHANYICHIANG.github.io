@@ -297,7 +297,7 @@ footer a{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 }
 
 .contact-info-child{
@@ -365,6 +365,15 @@ footer a{
 
     .fa-5x {
         font-size: 2em;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info-child {
+        width: 100%;
+        margin: 2vw;
     }
 }
 
