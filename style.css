@@ -373,7 +373,7 @@ footer a{
 
     .contact-info-child {
         width: 100%;
-        margin: 2vw;
+        margin: 2vw auto;
     }
 }
 
