@@ -119,6 +119,10 @@ header h2{
 
 /* portfolio */
 
+.col-md-6, .col-lg-4 {
+    margin: auto;
+}
+
 #portfolio-text{
     padding: 15px;
     background-color: gray;
